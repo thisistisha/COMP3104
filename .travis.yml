@@ -1,10 +1,13 @@
 language: node_js
 node_js:
- - "stable"
+  - "20.17.0"  # Matches your local version
+
+dist: focal  # Use Ubuntu 20.04
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
   local_dir: build
   on:
-  branch: master
+    branch: main  # Matches the working branch
